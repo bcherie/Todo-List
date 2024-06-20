@@ -1,0 +1,27 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="ru">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Todo List</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Todo List</h1>-->
+<!--<div>-->
+<!--    <form method="post" action="{{ url_for('add_task') }}" class="add_task_form">-->
+<!--       <h1>Добавить новую задачу:</h1>-->
+<!--        <input type="text" name="task" placeholder="your task" required aria-required="true" />-->
+<!--        <button>Отправить</button>-->
+<!--    </form>-->
+<!--</div>Ваши задачи:-->
+<!--{% for t in incomplete %}-->
+<!--<li class='mark'>{{t.task}} {{t.crt_date.strftime('%Y-%m-%d, %H:%M')}} <a href="{{ url_for('check_status', id=t.id) }}">Mark As Complete</a></li>-->
+<!--{% endfor %}-->
+<!--<p>Завершенные задачи:</p>-->
+<!--{% for t in complete %}-->
+<!--<li style="font-size: 30pt">{{ t.task }}</li>-->
+<!--{% endfor %}-->
+<!--<div>-->
+
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->

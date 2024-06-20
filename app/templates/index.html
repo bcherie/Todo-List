@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"/>
+    <link type="text/css" href="{{ url_for('static', filename='styles.css')}}" rel="stylesheet"/>
+    <title>Todo List</title>
+</head>
+<body>
+<h1>Todo List</h1>
+<div>
+    <form method="post" action="{{ url_for('add_task') }}" class="add_task_form">
+        <h2>Добавить новую задачу:</h2>
+        <textarea maxlength='250' name="task" placeholder="your task" required></textarea>
+        <!--        <input type="text" class="inp_size" name="task" placeholder="your task" aria-required="true"/>-->
+        <p><input type="datetime-local" name="deadline" value="" required/></p>
+        <button class="btn_add_task">Добавить</button>
+    </form>
+    {% if flag == 1 %}
+    <p>
+    <h3>Дата {{curr_date}} уже существует. Выберите другую.</h3></p>
+    {% endif %}
+</div>
+<p></p>
+<h2>Список задач:</h2>
+<table class="table">
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Задача</th>
+        <th scope="col">Дата</th>
+        <!--    <th scope="col">Редактировать</th>-->
+        <th scope="col">Завершить</th>
+    </tr>
+    <tr>
+        {% for t in incomplete %}
+        <td>{{ loop.index }}</td>
+        <td>{{t.task}}</td>
+        <td>{{t.task_date.strftime('%Y-%m-%d, %H:%M')}}</td>
+        <td><a href="{{ url_for('check_status', id=t.id) }}"><span class="bi bi-x-square-fill"></span></a></td>
+    </tr>
+    {% endfor %}
+</table>
+<p>
+<h2>Завершенные задачи:</h2></p>
+<a href="{{ url_for('delete_all_complete') }}">
+    <button class="btn_remove">Очистить список</button>
+</a>
+<table class="table_complete">
+    <tr>
+        <th scope="col">Задача</th>
+        <th scope="col">Дата</th>
+    </tr>
+    <tr>
+        {% for t in complete %}
+        <td>{{t.task}}</td>
+        <td>{{t.task_date.strftime('%Y-%m-%d, %H:%M')}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

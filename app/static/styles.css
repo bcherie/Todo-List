@@ -1,0 +1,147 @@
+body {
+    background-color: #d8c790;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 14px;
+    color: #e71111;
+}
+
+table.table {
+    border-spacing: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    width: 1000px;
+}
+
+table.table th {
+    padding: 10px 20px;
+    background: #56433D;
+    color: #F9C941;
+    border-right: 2px solid;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+table.table th:last-child {
+    border-right: none;
+}
+
+table.table td {
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 14px;
+    /*text-align: center;*/
+    /*text-align: left;*/
+    border-top: 2px solid #56433D;
+    border-bottom: 2px solid #56433D;
+    border-right: 2px solid #56433D;
+    /*word-break: break-all;*/
+    word-wrap: break-word;
+
+}
+
+table.table td:first-child {
+    border-left: 2px solid #56433D;
+    text-align: center;
+}
+
+table.table td:last-child {
+    text-align: center;
+}
+
+table.table td a {
+    color: rgb(167, 134, 30);
+    -webkit-text-stroke-color: rgb(131, 107, 14);
+    font-size: 1.5rem;
+}
+
+/*complete_table*/
+table.table_complete {
+    border-spacing: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    width: 60%;
+}
+
+table.table_complete th {
+    padding: 10px 20px;
+    background: #56433D;
+    color: #F9C941;
+    border-right: 2px solid;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+table.table_complete th:first-child {
+    width: 90%;
+}
+
+table.table_complete th:last-child {
+    border-right: none;
+    width: 10%;
+}
+
+table.table_complete td {
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+    border-top: 2px solid #56433D;
+    border-bottom: 2px solid #56433D;
+    border-right: 2px solid #56433D;
+
+}
+
+table.table_complete td:first-child {
+    border-left: 2px solid #56433D;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+table.table_complete td:last-child {
+    border-left: 1px solid #56433D;
+    text-align: left;
+}
+
+/*input task data*/
+textarea {
+    /*resize: none;*/
+    width: 300px;
+    height: 50px;
+}
+
+/*.inp_size {*/
+/*    width: 300px;*/
+/*    height: 50px;*/
+/*}*/
+
+/*buttons*/
+.btn_add_task {
+    width: 100px;
+    height: 45px;
+    /*margin: 10px;*/
+    background: #56433D;
+    color: #F9C941;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.btn_remove {
+    width: 120px;
+    height: 45px;
+    background: #56433D;
+    color: #F9C941;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    font-weight: bold;
+}
