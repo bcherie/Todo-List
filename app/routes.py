@@ -15,7 +15,7 @@ def index():
     return render_template('index.html', incomplete=activ_tasks, complete=completed_tasks, curr_date=dt, flag=flag)
 
 
-@app.route('/add', methods=['GET', 'POST'])
+@app.route('/add', methods=['POST'])
 def add_task():
     if request.method == 'POST':
         global dt
