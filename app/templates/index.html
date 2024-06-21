@@ -12,7 +12,6 @@
     <form method="post" action="{{ url_for('add_task') }}" class="add_task_form">
         <h2>Добавить новую задачу:</h2>
         <textarea maxlength='250' name="task" placeholder="your task" required></textarea>
-        <!--        <input type="text" class="inp_size" name="task" placeholder="your task" aria-required="true"/>-->
         <p><input type="datetime-local" name="deadline" value="" required/></p>
         <button class="btn_add_task">Добавить</button>
     </form>
